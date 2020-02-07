@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>assets/geofile.json</name>
+			<type>1</type>
+			<location>/Users/palito/Desktop/comparendos_dei_2018_small.geojson</location>
+		</link>
+	</linkedResources>
 </projectDescription>

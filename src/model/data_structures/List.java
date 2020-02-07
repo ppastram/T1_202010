@@ -79,11 +79,13 @@ public class List <T> implements IList <T>
 		
 	}
 
-	public T get(int pos) 
+	public T get(String id) 
 	{
 		Node <T> actual = list; 
+		
+		int ip = Integer.parseInt(id);
 
-		for (int i = 0; i < pos; i++)
+		for (int i = 0; i < ip; i++)
 		{
 			actual = actual.getNext();
 		} 
@@ -109,5 +111,7 @@ public class List <T> implements IList <T>
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 	
 }

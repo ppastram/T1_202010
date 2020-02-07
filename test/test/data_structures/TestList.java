@@ -2,16 +2,15 @@ package test.data_structures;
 
 
 import model.data_structures.List;
-import model.data_structures.Node;
-
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestList <T> {
+public class TestList <T> 
+{
 
-	private List list;
+	private List <T> list;
 	
 	@Before
 	public void setUp1() 
@@ -25,7 +24,7 @@ public class TestList <T> {
 		
 		for(int i = 1; i < 37; i++)
 		{
-			list.append(""+i);
+			list.append((T) (""+i));
 		}
 	}
 
@@ -42,7 +41,7 @@ public class TestList <T> {
 	@Test
 	public void testAddFirst() 
 	{
-		list.addFirst("primer elemento");
+		list.addFirst((T) "primer elemento");
 		
 		assertNotEquals(0, list.getSize() ); 
 		
@@ -55,7 +54,7 @@ public class TestList <T> {
 	{
 		setUp1();
 		
-		list.append("elemento 2");
+		list.append((T) "elemento 2");
 		
 		assertEquals(2, list.getSize() ); 
 		
@@ -83,7 +82,7 @@ public class TestList <T> {
 	{
 		setUp2();
 		
-		assertEquals("1", list.get(0) ); 
+		assertEquals("1", list.get("0") ); 
 		
 		list = null;
 
@@ -94,7 +93,7 @@ public class TestList <T> {
 	{
 		setUp2();
 		
-		assertEquals( 7, (T) list.get(6) );
+		assertEquals( 7, list.get("6") );
 		
 		list = null;
 

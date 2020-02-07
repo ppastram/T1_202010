@@ -16,7 +16,7 @@ public interface IList <E> extends Iterable <E>
 	public void removeFirst();
 	public void remove (int pos);
 	
-	public E get (int pos); 
+	public E get (String pos); 
 	public int getSize();	
 	public boolean isEmpty();
 
